@@ -6,7 +6,7 @@ import './App.css'
 
 
 const Stories = () => {
-  const {hits,isLoading}=useGlobalContext();
+  const {hits,isLoading,removePost}=useGlobalContext();
 
 
 
@@ -43,7 +43,7 @@ const Stories = () => {
                 <a href={url} target="_blank" >
                   Read More
                 </a>
-                <a href="#" style={{color: "red"}}>Remove</a>
+                <a href="#" style={{color: "red"}} onClick={()=>removePost(objectID)}>Remove</a>
                </div>
 
 
