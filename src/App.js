@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       {/* Welcom to MyNews */}
-      <div>Welcome to thapa technical News Website</div>
+      <div>Welcome to my News App</div>
       <Stories/>
 
     </div>

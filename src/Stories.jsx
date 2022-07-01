@@ -2,6 +2,7 @@
 
 import React,{useEffect} from 'react'
 import {useGlobalContext} from './context'
+import './App.css'
 
 
 const Stories = () => {
@@ -26,10 +27,33 @@ const Stories = () => {
 
   return (
     <>
-       <h2>My Tech News Post</h2>
+       <div className="stories-div">
+
+     
        {hits.map((curPost)=>{
-        return <h2>{curPost.title}</h2>;
+        const {title , author , objectID , url , num_comments}=curPost;
+        return(
+        <>
+             <div className="card" key={objectID}>
+              <h2>{title}</h2>
+              <p>
+                By {author} | <span>{num_comments}</span> comments
+              </p>
+               <div className="card-buttton" style={{display: 'flex', flexDirection: 'row',justifyContent: 'space-between'}}>
+                <a href={url} target="_blank" >
+                  Read More
+                </a>
+                <a href="#" style={{color: "red"}}>Remove</a>
+               </div>
+
+
+             </div>
+
+        </>
+        
+        );
        })}
+         </div>
     </>
   )
 }
