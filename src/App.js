@@ -1,5 +1,6 @@
 
 import './App.css';
+import Search from './Search';
 import Stories from './Stories';
 // import React ,{useContext} from 'react'
 // import {AppContext} from './context' now instead of two we can write once by creating custom hook
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       {/* Welcom to MyNews */}
       <div>Welcome to my News App</div>
+      <Search/>
       <Stories/>
 
     </div>

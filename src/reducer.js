@@ -19,7 +19,11 @@ const reducer=(state , action) =>{
                 )
 
             };
-           
+        case "SEARCH_QUERY":
+            return {
+                ...state,
+                query:action.payload,
+            }
     }
 
 
