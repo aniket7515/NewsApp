@@ -1,5 +1,6 @@
 
 import './App.css';
+import Pagination from './Pagination';
 import Search from './Search';
 import Stories from './Stories';
 // import React ,{useContext} from 'react'
@@ -15,6 +16,7 @@ function App() {
       {/* Welcom to MyNews */}
       <div>Welcome to my News App</div>
       <Search/>
+      <Pagination/>
       <Stories/>
 
     </div>
